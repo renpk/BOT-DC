@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
  
 
 # Set up your Discord bot token
-TOKEN = os.environ.get('TOKEN')
+TOKEN = os.environ.get('DCTOKEN')
 # GUILD_ID = '1305812477547642891'  # Optional, if you want to specify a guild
 CHANNEL_ID = '1305812477547642891'  # Channel where the message with the file was sent
 # Membuat objek Intents untuk memungkinkan akses ke pesan dan lainnya
