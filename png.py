@@ -9,13 +9,9 @@ from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
 # Set up your Discord bot token
-load_dotenv()  # Load .env file
-TOKEN = os.getenv('TOKEN')
-if not TOKEN:
-    raise ValueError("Token tidak ditemukan. Pastikan file .env berisi TOKEN.")
-
-CHANNEL_ID = '1305812477547642891'  # Channel ID
-
+TOKEN = os.environ.get('TOKEN')
+# GUILD_ID = '1305812477547642891'  # Optional, if you want to specify a guild
+CHANNEL_ID = '1305812477547642891'  # Channel where the message with the file was sent
 # Membuat objek Intents untuk memungkinkan akses ke pesan dan lainnya
 intents = discord.Intents.default()
 intents.message_content = True
